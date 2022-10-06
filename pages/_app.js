@@ -7,16 +7,15 @@ function MyApp({ Component, pageProps }) {
       <Global
         styles={css`
           body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-              Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
-              sans-serif;
             margin: 0;
+            background-image: url('/background.jpg');
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman',
+              serif;
           }
         `}
       />
       <Layout>
         <Component {...pageProps} />
-        This is where the context go.
       </Layout>
     </>
   );

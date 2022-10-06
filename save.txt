@@ -1,0 +1,1 @@
+<div>Product Id:{props.product.name} </div>;

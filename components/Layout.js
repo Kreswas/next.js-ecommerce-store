@@ -1,4 +1,5 @@
 import { css } from '@emotion/react';
+import Head from 'next/head';
 import Footer from './Footer';
 import Headers from './Header';
 
@@ -9,6 +10,9 @@ const mainStyles = css`
 export default function Layout(props) {
   return (
     <>
+      <Head>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <Headers />
       <main css={mainStyles}>{props.children}</main>
       <Footer />
