@@ -1,7 +1,11 @@
 import { css, Global } from '@emotion/react';
 import Layout from '../components/Layout';
 
+// import {useEffect, useState} from 'react';
+
 function MyApp({ Component, pageProps }) {
+  // const [cart, setCart] = useState();
+
   return (
     <>
       <Global

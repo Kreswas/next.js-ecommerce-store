@@ -25,7 +25,6 @@ export default function Empty() {
       <br />
       <br />
       <br />
-      <br />
     </>
   );
 }

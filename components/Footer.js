@@ -52,16 +52,24 @@ export default function Footer() {
         <h3>Who We Are</h3>
         <ul className="bottom nav flex-column" css={ulStyles}>
           <li css={liStyles}>
-            <Link href="/about"><a>About Us</a></Link>
+            <Link href="/about">
+              <a>About Us</a>
+            </Link>
           </li>
           <li css={liStyles}>
-            <Link href="/contact"><a>Contact Us</a></Link>
+            <Link href="/contact">
+              <a>Contact Us</a>
+            </Link>
           </li>
           <li css={liStyles}>
-            <Link href="/empty"><a>Affiliates</a></Link>
+            <Link href="/empty">
+              <a>Affiliates</a>
+            </Link>
           </li>
           <li css={liStyles}>
-            <Link href="/empty"><a>Jobs</a></Link>
+            <Link href="/empty">
+              <a>Jobs</a>
+            </Link>
           </li>
         </ul>
       </div>
@@ -69,16 +77,24 @@ export default function Footer() {
         <h3>Your Purchase</h3>
         <ul className="bottom nav flex-column" css={ulStyles}>
           <li css={liStyles}>
-            <Link href="/empty"><a>Privacy Policy</a></Link>
+            <Link href="/empty">
+              <a>Privacy Policy</a>
+            </Link>
           </li>
           <li css={liStyles}>
-            <Link href="/empty"><a>Delivery</a></Link>
+            <Link href="/empty">
+              <a>Delivery</a>
+            </Link>
           </li>
           <li css={liStyles}>
-            <Link href="/empty"><a>Refund & return</a></Link>
+            <Link href="/empty">
+              <a>Refund & return</a>
+            </Link>
           </li>
           <li css={liStyles}>
-            <Link href="/empty"><a>Help & FAQs</a></Link>
+            <Link href="/empty">
+              <a>Help & FAQs</a>
+            </Link>
           </li>
         </ul>
       </div>
@@ -92,9 +108,9 @@ export default function Footer() {
       Contact Me: &nbsp;
       {/* <li css={liStyles}> */}
       {/* Contact Me: &nbsp; */}
-      <Link href="mailto:melihuraz@hotmail.com" target="_blank"><a>
-        E-Mail
-      </a></Link>
+      <Link href="mailto:melihuraz@hotmail.com" target="_blank">
+        <a>E-Mail</a>
+      </Link>
       {/* </li> */}
       <div css={copyright}>© Yarn Dreams 2022. All Rights Reserved.</div>
     </footer>

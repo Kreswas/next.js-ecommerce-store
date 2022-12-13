@@ -2,7 +2,7 @@ import { css } from '@emotion/react';
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
-import { products } from '../../database/products';
+import { sql } from '../../database/database';
 
 const h2Styles = css`
   text-align: center;
@@ -20,14 +20,9 @@ const spanStyles = css`
   display: inline-block;
   text-align: center;
   position: relative;
-
-  /* border-style: inset; */
-  /* border: 2px solid black; */
   padding: 20px 50px;
   & + & {
     margin-top: 55px;
-    /* margin-left: 10px; */
-    /* margin-right: 10px; */
   }
 `;
 const linkStyles = css`
@@ -37,7 +32,6 @@ const linkStyles = css`
   }
 `;
 export default function Products(props) {
-  console.log('props', props);
   return (
     <>
       <Head>
@@ -47,7 +41,7 @@ export default function Products(props) {
       <h1 css={h2Styles}>All Products</h1>
       {props.products.map((product) => {
         return (
-          <div key={`cotton-${product.id}`} css={spanStyles}>
+          <div key={`yarn-${product.id}`} css={spanStyles}>
             <h2 css={linkStyles}>
               {' '}
               <Link href={`/product-pages/${product.id}`}>
@@ -76,10 +70,6 @@ export default function Products(props) {
             <div>
               <h3>Price: {`${product.price} EUR`}</h3>
             </div>
-            <div>
-              {' '}
-              Image Name: {product.id}-{product.name.toLowerCase()}.jpg
-            </div>
           </div>
         );
       })}
@@ -90,7 +80,21 @@ export default function Products(props) {
 // anything inside this function will only be run on the server (in Node.js)
 //
 // this means you can access things like fs
-export function getServerSideProps() {
+export async function getServerSideProps() {
+  const products = await sql`SELECT * FROM product`;
+  // console.log('products', products);
+  // const parsedCookies = context.req.cookies.amount
+  //   ? JSON.parse(context.req.cookies.amount)
+  //   : [];
+  // const products = productsDatabase.map((product) => {
+  //   return {
+  //     ...product,
+  //     amount:
+  //       parsedCookies.find(
+  //         (cookieProductObject) => product.id === cookieProductObject.id,
+  //       )?.amount || 0,
+  //   };
+  // });
   return {
     props: {
       products,

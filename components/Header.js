@@ -7,6 +7,7 @@ const navStyles = css`
   margin-top: 40px;
   padding: 20px;
   border-width: 5px;
+  border-radius: 6px;
   opacity: 0.8;
   box-shadow: 0 0 10px 5px #000;
   a {
@@ -31,6 +32,10 @@ const cartStyle = css`
 const sharedTitleStyles = css`
   margin-left: 10px;
   font-family: 'Brush Script MT', cursive;
+  a {
+    text-decoration: none;
+    color: black;
+  }
 `;
 const cursorStyles = css`
   cursor: default;

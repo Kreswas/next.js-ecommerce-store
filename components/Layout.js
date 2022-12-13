@@ -13,8 +13,9 @@ export default function Layout(props) {
       <Head>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Headers />
+      <Headers cart={props.cart} setCart={props.setCart} />
       <main css={mainStyles}>{props.children}</main>
+      {/* {console.log('children', props.children.props.item.color)} */}
       <Footer />
     </>
   );
